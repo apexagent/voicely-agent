@@ -1,0 +1,206 @@
+MASTER BUILD PROMPT — “Voicely Agent” (Elite Website)
+
+Objective:
+Build a cinematic, high-performance marketing site for Voicely Agent — an AI voice workforce platform with a crypto flywheel ($VOICE). The site should feel premium, futuristic, and conversion-focused. Tech stack: Next.js + TailwindCSS + TypeScript, deployed on Replit. Include Framer Motion animations, Recharts for simple charts, and API stubs for voice demo.
+
+Brand & Theme (strict)
+
+Name: Voicely Agent
+
+Tagline: Where every voice works for you.
+
+Palette:
+
+Deep Space Navy #0A0E1A (background)
+
+Electric Violet #7B61FF (primary accent)
+
+Cyber Blue #00B2FF (secondary accent)
+
+Soft White #FFFFFF (text)
+
+Slate #8A94A6 (muted text/UI)
+
+Typography:
+
+Titles: Orbitron (import via Google Fonts)
+
+Body: Inter (Google Fonts)
+
+Aesthetic: glassmorphism panels, neon edges, subtle scanlines/particles, voice-wave motifs, soft glow shadows.
+
+Imagery: a holographic 3D “voice head” (placeholder <img>), animated waveforms, circuit meshes, and glows (violet ↔ cyan).
+
+Pages & IA
+
+/ Home (hero, agent types, how it works, flywheel, logos, testimonials, CTA)
+
+/agents Product detail (Sales, Receptionist, Appointment, Follow-up)
+
+/token $VOICE token (utility, buyback/burn flywheel, tokenomics chart, roadmap, legal)
+
+/demo Live voice demo (call/mic UI, transcript panel) — use API stubs
+
+/docs Quick start + API keys/integration guide
+
+/pricing Tiers & usage
+
+/legal/* Terms, Privacy, Token Disclaimer
+
+sitemap.xml, robots.txt, custom 404/500
+
+Home Page — Sections (exact order)
+
+Hero (Cinematic)
+
+Headline: “Meet Your AI-Powered Voice Agent”
+
+Sub: “Answering, booking, selling, and following up 24/7 — with real revenue fueling $VOICE buybacks.”
+
+CTAs: “Launch Free Demo”, “See How It Works”
+
+Right side: holographic 3D head placeholder + floating badges: “Realtime • Human cadence • Multilingual”
+
+Background: layered gradients (violet/cyan), particles, subtle scanlines
+
+Logos / Social Proof
+
+Placeholder logo row; caption “Trusted by teams scaling conversations globally”
+
+Agent Grid (4 cards)
+
+AI Sales Agent — “Qualify, pitch, and close — logs to CRM”
+
+AI Receptionist — “Answers FAQs & routes by skill”
+
+AI Appointment Agent — “Books, reschedules, confirms”
+
+AI Follow-Up Agent — “Renews, reminds, recovers”
+
+How It Works (4 steps)
+
+Train in Seconds → Choose a Voice → Connect Lines → Go Live
+
+Each step = card with icon, short copy, micro-animation on hover
+
+$VOICE Flywheel (animated diagram)
+
+Revenue → Auto-Convert → Buyback & Burn → Shrinking Supply → Increased Value Alignment
+
+Build as responsive SVG with subtle pulsing arrows
+
+Tokenomics (mini)
+
+Inline donut chart (Recharts): Team 10%, Treasury 20%, Burn 30%, Public 40%
+
+Link to /token for full details
+
+Testimonials
+
+3–5 cards with star ratings + short quotes + “listen” micro-button to play a canned TTS line
+
+Final CTA
+
+“Spin up your first Voicely Agent in minutes” → CTA buttons to Demo / Pricing
+
+/token Page (detailed)
+
+Utility: Access (stake for features), Rewards (usage rebates), Governance (roadmap votes)
+
+Flywheel: Large animated SVG diagram with captions
+
+Economics: Tokenomics donut (same values), vesting table placeholders
+
+Roadmap: Phases 1–5 (MVP → Token → Marketplace → DAO → Enterprise)
+
+Compliance banner: “$VOICE is a utility token, not an investment. See Token Disclaimer.”
+
+/demo Page (functional UI, stubbed)
+
+Left panel: Dial pad or “Start Call” button; language select; voice select
+
+Right panel: Live transcript area; sentiment tag; action summary (booked, follow-up, routed)
+
+Integrations: Buttons to “Connect Twilio” / “Connect Vapi”, “Connect CRM”
+
+Implement api/demo/* stubs that return mocked transcripts & outcomes
+
+Animations & FX (Framer Motion)
+
+Staggered hero text reveal; gentle parallax/glow on head image
+
+Card hover: scale 1.02 + border-glow
+
+Flywheel arrows: slow pulsing motion
+
+Page transitions: fade/slide — <300ms
+
+Components (shadcn/ui style or own)
+
+Navbar (sticky, translucent), Footer
+
+Button variants (primary gradient, outline glass)
+
+Card (glass, glow border)
+
+Badge (pill with dot glow)
+
+Pricing table, FAQ accordion
+
+Chart wrapper (Recharts theming)
+
+Code block (for docs)
+
+Toasts (for demo & forms)
+
+Accessibility & Performance
+
+Semantic landmarks, aria labels, focus rings
+
+Color contrast AA minimum
+
+Lazy load heavy media; responsive images
+
+Lighthouse targets: 95+ Performance/Best-Practices/SEO, 90+ Accessibility
+
+SEO & Meta
+
+Next.js metadata API, dynamic OG & Twitter images
+
+Title format: “Voicely Agent — [Section]”
+
+JSON-LD: Organization, Product, FAQ on homepage
+
+Analytics & DX
+
+Add Vercel Analytics alternative: Plausible (script placeholder)
+
+Error boundary + simple logging to console (dev)
+
+.env placeholders (see Replit section)
+
+Tech & Libraries
+
+Next.js 14 (App Router), TypeScript
+
+TailwindCSS; plugins: @tailwindcss/typography, @tailwindcss/forms
+
+Framer Motion
+
+Recharts (Tokenomics)
+
+Lucide-react icons
+
+Zod + React Hook Form (demo forms)
+
+dayjs for dates
+
+API stubs in /app/api/demo/*
+
+Tailwind Config (key points)
+
+Add fonts (Orbitron, Inter) to theme
+
+Extend colors with brand.violet = #7B61FF, brand.cyan = #00B2FF, bg.space = #0A0E1A
+
+Add shadows: glowViolet, glowCyan

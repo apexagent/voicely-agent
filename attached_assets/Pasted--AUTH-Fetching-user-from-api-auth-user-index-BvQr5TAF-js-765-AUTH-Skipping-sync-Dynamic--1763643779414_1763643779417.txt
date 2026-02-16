@@ -1,0 +1,1422 @@
+[AUTH] 🔍 Fetching user from /api/auth/user...
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:775 [HEADER] 🔍 DETAILED Auth state: {hasUser: false, userObject: undefined, isAuthenticated: false, userEmail: undefined, userId: undefined, …}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:880 [SIGN-IN] Auth state: {hasUser: false, isLoading: true, isAuthenticated: false, userEmail: undefined}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:765 [WebSocket] Initializing singleton connection...
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: false, dynamicUserId: undefined, dynamicEmail: undefined, hasWallet: false, walletAddress: undefined, …}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: false, dynamicUserId: undefined, dynamicEmail: undefined, hasWallet: false, walletAddress: undefined, …}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: false, dynamicUserId: undefined, dynamicEmail: undefined, hasWallet: false, walletAddress: undefined, …}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: false, dynamicUserId: undefined, dynamicEmail: undefined, hasWallet: false, walletAddress: undefined, …}
+index-BvQr5TAF.js:765  GET https://voicelyagent.ai/api/auth/user 401 (Unauthorized)
+queryFn @ index-BvQr5TAF.js:765
+o @ index-BvQr5TAF.js:49
+g @ index-BvQr5TAF.js:49
+start @ index-BvQr5TAF.js:49
+fetch @ index-BvQr5TAF.js:49
+Cb @ index-BvQr5TAF.js:49
+onSubscribe @ index-BvQr5TAF.js:49
+subscribe @ index-BvQr5TAF.js:49
+(anonymous) @ index-BvQr5TAF.js:49
+goe @ index-BvQr5TAF.js:39
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] 🔍 Response status: 401 
+index-BvQr5TAF.js:765 [AUTH] ❌ Not authenticated (401) - no session found
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:775 [HEADER] 🔍 DETAILED Auth state: {hasUser: false, userObject: null, isAuthenticated: false, userEmail: undefined, userId: undefined, …}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:880 [SIGN-IN] Auth state: {hasUser: false, isLoading: false, isAuthenticated: false, userEmail: undefined}
+index-BvQr5TAF.js:765 [AUTH] Skipping sync - Dynamic not ready {isDynamicAuthenticated: false, hasDynamicUser: false}
+index-BvQr5TAF.js:629 [DynamicSDK] [INFO]: Warning!
+index-BvQr5TAF.js:629 [DynamicSDK] [INFO]: This is a browser feature intended for developers. You are reading this message because you opened the browser console, a developer tool.1. Never share your tokens or sensitive information with anyone.2. Do not paste any code you do not fully understand.3. If someone instructed you to do this, it is likely a scam.Injecting code into your browser could result in loss of tokens or control of your account that cannot be recovered or protected.
+index-BvQr5TAF.js:765 [WebSocket] Connected: xDccFV46rOmXw0HJAAAR
+index-BvQr5TAF.js:765 [AUTH] Starting sync to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', isFirstSync: true}
+index-BvQr5TAF.js:765 [AUTH] Starting sync to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', isFirstSync: true}
+index-BvQr5TAF.js:765 [AUTH] Starting sync to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', isFirstSync: true}
+index-BvQr5TAF.js:765 [AUTH] Starting sync to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', isFirstSync: true}
+index-BvQr5TAF.js:1346 [DYNAMIC] Auth success event fired! {hasUser: true, userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com'}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: true, dynamicUserId: '377e58ef-dcff-4391-9587-de5136e34248', dynamicEmail: 'lumiagentsol@gmail.com', hasWallet: true, walletAddress: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', …}
+index-BvQr5TAF.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-BvQr5TAF.js:765 [AUTH] 📤 Sending sync request to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX'}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: true, dynamicUserId: '377e58ef-dcff-4391-9587-de5136e34248', dynamicEmail: 'lumiagentsol@gmail.com', hasWallet: true, walletAddress: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', …}
+index-BvQr5TAF.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-BvQr5TAF.js:765 [AUTH] 📤 Sending sync request to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX'}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: true, dynamicUserId: '377e58ef-dcff-4391-9587-de5136e34248', dynamicEmail: 'lumiagentsol@gmail.com', hasWallet: true, walletAddress: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', …}
+index-BvQr5TAF.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-BvQr5TAF.js:765 [AUTH] 📤 Sending sync request to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX'}
+index-BvQr5TAF.js:765 [AUTH-DEBUG] Dynamic Context State: {hasDynamicUser: true, dynamicUserId: '377e58ef-dcff-4391-9587-de5136e34248', dynamicEmail: 'lumiagentsol@gmail.com', hasWallet: true, walletAddress: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', …}
+index-BvQr5TAF.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-BvQr5TAF.js:765 [AUTH] 📤 Sending sync request to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX'}
+index-BvQr5TAF.js:1346 [DYNAMIC] Got auth token, syncing user to backend... {userId: '377e58ef-dcff-4391-9587-de5136e34248', email: 'lumiagentsol@gmail.com', wallet: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX'}
+index-BvQr5TAF.js:629 [DynamicWaasWalletClient] [INFO]: Loading iframe for waas wallet client... (attempt 1/2) {iframeDomain: 'https://app.dynamicauth.com', environmentId: '5bd2ebb4-fb32-421e-b9b9-6f0576723c71', sdkVersion: '4.45.3', instanceId: '67d14f0a-d9a8-4b2c-beff-ecf182a7d12f', chainName: 'SVM', …}
+index-BvQr5TAF.js:765  POST https://voicelyagent.ai/api/auth/dynamic 401 (Unauthorized)
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] 📥 Backend response: {status: 401, statusText: '', ok: false}
+index-BvQr5TAF.js:765 [AUTH] ❌ Sync failed: {status: 401, statusText: '', errorResponse: {…}}
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765  POST https://voicelyagent.ai/api/auth/dynamic 401 (Unauthorized)
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] 📥 Backend response: {status: 401, statusText: '', ok: false}
+index-BvQr5TAF.js:765 [AUTH] ❌ Sync failed: {status: 401, statusText: '', errorResponse: {…}}
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765  POST https://voicelyagent.ai/api/auth/dynamic 401 (Unauthorized)
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] 📥 Backend response: {status: 401, statusText: '', ok: false}
+index-BvQr5TAF.js:765 [AUTH] ❌ Sync failed: {status: 401, statusText: '', errorResponse: {…}}
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:1346  POST https://voicelyagent.ai/api/auth/dynamic 401 (Unauthorized)
+onAuthSuccess @ index-BvQr5TAF.js:1346
+await in onAuthSuccess
+(anonymous) @ index-BvQr5TAF.js:765
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:1346 [DYNAMIC] 📥 Backend response: {status: 401, ok: false}
+index-BvQr5TAF.js:765  POST https://voicelyagent.ai/api/auth/dynamic 401 (Unauthorized)
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] 📥 Backend response: {status: 401, statusText: '', ok: false}
+index-BvQr5TAF.js:1346 [DYNAMIC] ❌ Backend sync failed: 401 {success: false, message: 'Invalid authentication token', error: 'JWT verification failed: jwt issuer invalid. expec…z/api/v0/sdk/5bd2ebb4-fb32-421e-b9b9-6f0576723c71'}
+onAuthSuccess @ index-BvQr5TAF.js:1346
+await in onAuthSuccess
+(anonymous) @ index-BvQr5TAF.js:765
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-BvQr5TAF.js:765 [AUTH] ❌ Sync failed: {status: 401, statusText: '', errorResponse: {…}}
+l @ index-BvQr5TAF.js:765
+await in l
+(anonymous) @ index-BvQr5TAF.js:765
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+ym @ index-BvQr5TAF.js:705
+bi @ index-BvQr5TAF.js:740
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+fSt @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+verifyFunction @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:754
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+l @ index-BvQr5TAF.js:731
+Promise.then
+d @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:731
+Y @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:755
+(anonymous) @ index-BvQr5TAF.js:755
+zN @ index-BvQr5TAF.js:41
+py @ index-BvQr5TAF.js:41
+YNe @ index-BvQr5TAF.js:41
+Hm @ index-BvQr5TAF.js:41
+SB @ index-BvQr5TAF.js:41
+mm @ index-BvQr5TAF.js:39
+(anonymous) @ index-BvQr5TAF.js:41
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+PNe @ index-BvQr5TAF.js:39
+listener @ index-BvQr5TAF.js:731
+l.emit @ index-BvQr5TAF.js:705
+rl @ index-BvQr5TAF.js:705
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+(anonymous) @ index-BvQr5TAF.js:731
+n @ index-BvQr5TAF.js:731
+set @ index-BvQr5TAF.js:731
+mM @ index-BvQr5TAF.js:731
+await in mM
+(anonymous) @ index-BvQr5TAF.js:731
+Promise.then
+fYe @ index-BvQr5TAF.js:731
+IYe @ index-BvQr5TAF.js:731
+IEt @ index-BvQr5TAF.js:756
+kAt @ index-BvQr5TAF.js:765
+xD @ index-BvQr5TAF.js:39
+ese @ index-BvQr5TAF.js:41
+Yoe @ index-BvQr5TAF.js:41
+GNe @ index-BvQr5TAF.js:41
+VI @ index-BvQr5TAF.js:41
+Joe @ index-BvQr5TAF.js:41
+I @ index-BvQr5TAF.js:26
+M @ index-BvQr5TAF.js:26
+_ @ inpage.js:166
+w @ inpage.js:166
+Y @ inpage.js:166
+postMessage
+h @ inpage.js:166
+b @ inpage.js:166
+O @ index-BvQr5TAF.js:26
+N @ index-BvQr5TAF.js:26
+e.unstable_scheduleCallback @ index-BvQr5TAF.js:26
+tse @ index-BvQr5TAF.js:41
+Oa @ index-BvQr5TAF.js:41
+Fc @ index-BvQr5TAF.js:41
+JN @ index-BvQr5TAF.js:41
+GN.render.DD.render @ index-BvQr5TAF.js:41
+(anonymous) @ index-BvQr5TAF.js:1346Understand this error
+index-0viu76gG.js:9 Datadog Browser SDK: No storage available for session. We will not send any data.
+b @ index-0viu76gG.js:9
+init @ index-0viu76gG.js:9
+(anonymous) @ index-0viu76gG.js:9
+us @ index-0viu76gG.js:1
+init @ index-0viu76gG.js:9
+(anonymous) @ index-0viu76gG.js:9Understand this warning
+index-BvQr5TAF.js:629 [DynamicWaasWalletClient] [INFO]: Iframe loaded successfully... {iframeDomain: 'https://app.dynamicauth.com', environmentId: '5bd2ebb4-fb32-421e-b9b9-6f0576723c71', sdkVersion: '4.45.3', instanceId: '67d14f0a-d9a8-4b2c-beff-ecf182a7d12f', chainName: 'SVM', …}
+index-0viu76gG.js:199 [LaunchDarkly] The waitForInitialization function was called without a timeout specified. In a future version a default timeout will be applied.
+(anonymous) @ index-0viu76gG.js:199
+a @ index-0viu76gG.js:199
+c.<computed> @ index-0viu76gG.js:199
+waitForInitialization @ index-0viu76gG.js:199
+r9 @ index-0viu76gG.js:199
+Vfe @ index-0viu76gG.js:199
+Wfe @ index-0viu76gG.js:199
+(anonymous) @ index-0viu76gG.js:199
+(anonymous) @ index-0viu76gG.js:105
+(anonymous) @ index-0viu76gG.js:99
+nq @ index-0viu76gG.js:99
+f @ index-0viu76gG.js:105
+(anonymous) @ index-0viu76gG.js:99
+emit @ index-0viu76gG.js:99
+emit @ index-0viu76gG.js:99
+o9 @ index-0viu76gG.js:199Understand this warning
+index-0viu76gG.js:199 [LaunchDarkly] LaunchDarkly client initialized
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Initializing Dynamic Waas Wallet SDK
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Initializing Dynamic Waas Wallet SDK
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Initializing Dynamic Waas Wallet SDK
+3index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Dynamic Waas Wallet SDK initialized
+index-0viu76gG.js:88 [DynamicWaasIframe] [WARN]: Missing authToken required for getWallet operation, check your client to ensure the function is called with authToken parameter.
+log @ index-0viu76gG.js:88
+warn @ index-0viu76gG.js:88
+ln @ index-0viu76gG.js:199
+(anonymous) @ index-0viu76gG.js:199
+(anonymous) @ index-0viu76gG.js:105
+(anonymous) @ index-0viu76gG.js:99
+nq @ index-0viu76gG.js:99
+f @ index-0viu76gG.js:105
+(anonymous) @ index-0viu76gG.js:99
+emit @ index-0viu76gG.js:99
+emit @ index-0viu76gG.js:99
+o9 @ index-0viu76gG.js:199Understand this warning
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Restoring wallet {address: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', chain: 'solana', id: '17634b54-3a1e-4df6-8a8a-9555e06a90c3', nameService: {…}, walletName: 'dynamicwaas', …}
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] No item found in iframe local storage for accountAddress: 27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: recoverEncryptedBackupByWallet wallet: SIGN_MESSAGE {walletId: '17634b54-3a1e-4df6-8a8a-9555e06a90c3', chainName: 'SVM', accountAddress: '27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX', thresholdSignatureScheme: 'TWO_OF_TWO', derivationPath: '{"0":44,"1":501,"2":0,"3":0,"4":0}', …}
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] No item found in iframe local storage for accountAddress: 27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Recovered backup [{…}]

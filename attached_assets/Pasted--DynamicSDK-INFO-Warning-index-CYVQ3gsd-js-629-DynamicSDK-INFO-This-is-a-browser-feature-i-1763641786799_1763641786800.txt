@@ -1,0 +1,73 @@
+[DynamicSDK] [INFO]: Warning!
+index-CYVQ3gsd.js:629 [DynamicSDK] [INFO]: This is a browser feature intended for developers. You are reading this message because you opened the browser console, a developer tool.1. Never share your tokens or sensitive information with anyone.2. Do not paste any code you do not fully understand.3. If someone instructed you to do this, it is likely a scam.Injecting code into your browser could result in loss of tokens or control of your account that cannot be recovered or protected.
+/api/auth/user:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:765 [AUTH] 🔍 Response status: 401 
+index-CYVQ3gsd.js:765 [AUTH] ❌ Not authenticated (401) - no session found
+index-CYVQ3gsd.js:765 [AUTH] Skipping sync - Dynamic not ready Object
+index-CYVQ3gsd.js:765 [AUTH] Skipping sync - Dynamic not ready Object
+index-CYVQ3gsd.js:775 [HEADER] 🔍 DETAILED Auth state: Object
+index-CYVQ3gsd.js:765 [AUTH] Skipping sync - Dynamic not ready Object
+index-CYVQ3gsd.js:880 [SIGN-IN] Auth state: Object
+index-CYVQ3gsd.js:765 [AUTH] Skipping sync - Dynamic not ready Object
+index-CYVQ3gsd.js:765 [WebSocket] Connected: w96cazdioe4UwUlwAAAZ
+index-CYVQ3gsd.js:765 [AUTH] Starting sync to backend... Object
+index-CYVQ3gsd.js:765 [AUTH] Starting sync to backend... Object
+index-CYVQ3gsd.js:765 [AUTH] Starting sync to backend... Object
+index-CYVQ3gsd.js:765 [AUTH] Starting sync to backend... Object
+index-CYVQ3gsd.js:1346 [DYNAMIC] Auth success event fired! Object
+index-CYVQ3gsd.js:765 [AUTH-DEBUG] Dynamic Context State: Object
+index-CYVQ3gsd.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-CYVQ3gsd.js:765 [AUTH] 📤 Sending sync request to backend... Object
+index-CYVQ3gsd.js:765 [AUTH-DEBUG] Dynamic Context State: Object
+index-CYVQ3gsd.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-CYVQ3gsd.js:765 [AUTH] 📤 Sending sync request to backend... Object
+index-CYVQ3gsd.js:765 [AUTH-DEBUG] Dynamic Context State: Object
+index-CYVQ3gsd.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-CYVQ3gsd.js:765 [AUTH] 📤 Sending sync request to backend... Object
+index-CYVQ3gsd.js:765 [AUTH-DEBUG] Dynamic Context State: Object
+index-CYVQ3gsd.js:765 [AUTH] ✅ Got valid auth token, length: 3777
+index-CYVQ3gsd.js:765 [AUTH] 📤 Sending sync request to backend... Object
+index-CYVQ3gsd.js:1346 [DYNAMIC] Got auth token, syncing user to backend...
+index-CYVQ3gsd.js:629 [DynamicWaasWalletClient] [INFO]: Loading iframe for waas wallet client... (attempt 1/2) Object
+/api/auth/dynamic:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:765 [AUTH] 📥 Backend response: Object
+index-CYVQ3gsd.js:765 [AUTH] ❌ Sync failed: Object
+l @ index-CYVQ3gsd.js:765Understand this error
+/api/auth/dynamic:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:765 [AUTH] 📥 Backend response: Object
+index-CYVQ3gsd.js:765 [AUTH] ❌ Sync failed: Object
+l @ index-CYVQ3gsd.js:765Understand this error
+/api/auth/dynamic:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:765 [AUTH] 📥 Backend response: Object
+index-CYVQ3gsd.js:765 [AUTH] ❌ Sync failed: Object
+l @ index-CYVQ3gsd.js:765Understand this error
+/api/auth/dynamic:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:765 [AUTH] 📥 Backend response: Object
+index-CYVQ3gsd.js:765 [AUTH] ❌ Sync failed: Object
+l @ index-CYVQ3gsd.js:765Understand this error
+/api/auth/dynamic:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-CYVQ3gsd.js:1346 [DYNAMIC] ❌ Backend sync failed: 401 {"success":false,"message":"Invalid authentication token"}
+onAuthSuccess @ index-CYVQ3gsd.js:1346Understand this error
+index-0viu76gG.js:9 Datadog Browser SDK: No storage available for session. We will not send any data.
+b @ index-0viu76gG.js:9Understand this warning
+index-CYVQ3gsd.js:629 [DynamicWaasWalletClient] [INFO]: Iframe loaded successfully... Object
+index-0viu76gG.js:199 [LaunchDarkly] The waitForInitialization function was called without a timeout specified. In a future version a default timeout will be applied.
+(anonymous) @ index-0viu76gG.js:199Understand this warning
+index-0viu76gG.js:199 [LaunchDarkly] LaunchDarkly client initialized
+3index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Initializing Dynamic Waas Wallet SDK
+3index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Dynamic Waas Wallet SDK initialized
+index-0viu76gG.js:88 [DynamicWaasIframe] [WARN]: Missing authToken required for getWallet operation, check your client to ensure the function is called with authToken parameter.
+log @ index-0viu76gG.js:88Understand this warning
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Restoring wallet Object
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] No item found in iframe local storage for accountAddress: 27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: recoverEncryptedBackupByWallet wallet: SIGN_MESSAGE Object
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] No item found in iframe local storage for accountAddress: 27Vuj8dQ3nBQYuvvksuAEDe4DUr7XwaVjLunZJ1isvuX
+index-0viu76gG.js:88 [DynamicWaasWalletClient] [DEBUG]: [DynamicWaasWalletClient] Recovered backup Array(1)
+index-CYVQ3gsd.js:765 [WebSocket] Disconnected: transport close
+index-CYVQ3gsd.js:765 [WebSocket] Connected: Pdn5imks4TfMUL3BAAAl
+index-CYVQ3gsd.js:765 [WebSocket] Disconnected: transport close
+index-CYVQ3gsd.js:765 [WebSocket] Connected: yYX1IFSk_xJYo90SAAAv
+index-CYVQ3gsd.js:765 [WebSocket] Disconnected: transport close
+index-CYVQ3gsd.js:765 [WebSocket] Connected: mpUXmc-PHTTV_JUbAAA5
+index-CYVQ3gsd.js:765 [WebSocket] Disconnected: transport close
+index-CYVQ3gsd.js:765 [WebSocket] Connected: emYikmYzaUKghI0_AABD
