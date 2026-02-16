@@ -1,0 +1,884 @@
+import { useState, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { 
+  TrendingUp, 
+  Zap, 
+  Globe, 
+  Users, 
+  Phone, 
+  MessageSquare,
+  BarChart3,
+  Shield,
+  Cpu,
+  Mic,
+  Brain,
+  Rocket,
+  DollarSign,
+  Clock,
+  Target,
+  CheckCircle2,
+  ArrowRight,
+  Play,
+  ChevronRight,
+  Sparkles,
+  Building2,
+  Heart,
+  CreditCard,
+  HeadphonesIcon
+} from "lucide-react";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import { VoiceWaveLoader } from "@/components/cyber";
+import voicelyLogo from "@assets/Untitled design (11)_1762790672251.png";
+
+// Animated counter component
+function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+    
+    let startTime: number | null = null;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * end));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  }, [end, duration, isInView]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
+// Section wrapper with scroll animation
+function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } }
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export default function Investors() {
+  const [selectedUseCase, setSelectedUseCase] = useState("customer-service");
+  const [demoActive, setDemoActive] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  // Market data
+  const marketGrowth = [
+    { year: "2024", market: 2.3, voicely: 0 },
+    { year: "2025", market: 4.8, voicely: 0.5 },
+    { year: "2026", market: 8.9, voicely: 2.1 },
+    { year: "2027", market: 15.2, voicely: 5.8 },
+    { year: "2028", market: 24.6, voicely: 12.3 }
+  ];
+
+  const performanceMetrics = [
+    { metric: "Response Time", value: "< 800ms" },
+    { metric: "Uptime", value: "99.9%" },
+    { metric: "Accuracy", value: "98.5%" },
+    { metric: "Cost Savings", value: "87%" }
+  ];
+
+  const tokenDistribution = [
+    { name: "Platform Rewards", value: 40, color: "#8B5CF6" },
+    { name: "Team & Dev", value: 20, color: "#06B6D4" },
+    { name: "Investors", value: 25, color: "#10B981" },
+    { name: "Marketing", value: 15, color: "#F59E0B" }
+  ];
+
+  const useCases = {
+    "customer-service": {
+      title: "Customer Service",
+      icon: HeadphonesIcon,
+      stats: { reduction: "87%", satisfaction: "94%", volume: "24/7" },
+      description: "Handle unlimited concurrent calls with consistent quality"
+    },
+    "sales": {
+      title: "Sales & Lead Qual",
+      icon: Phone,
+      stats: { conversion: "+45%", qualified: "3x", coverage: "100%" },
+      description: "Qualify leads and book appointments instantly"
+    },
+    "healthcare": {
+      title: "Healthcare",
+      icon: Heart,
+      stats: { efficiency: "+60%", accuracy: "99%", compliance: "HIPAA" },
+      description: "Appointment scheduling and patient communication"
+    },
+    "finance": {
+      title: "Financial Services",
+      icon: CreditCard,
+      stats: { automation: "92%", security: "Bank-grade", response: "< 1s" },
+      description: "Account inquiries and transaction support"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#0A0B1E] via-[#0F1023] to-black text-white overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-cyan-600/10" />
+          {[...Array(80)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-purple-500/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.2, 0.5, 0.2]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          {/* Logo */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-purple-600/30 via-purple-500/20 to-cyan-600/30 border-2 border-purple-500/50 flex items-center justify-center p-6"
+          >
+            <img src={voicelyLogo} alt="Voicely" className="w-full h-full object-contain" />
+          </motion.div>
+
+          {/* Main Headline */}
+          <motion.h1
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-5xl sm:text-7xl font-black mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent"
+            style={{ fontFamily: "'Orbitron', sans-serif" }}
+          >
+            The Future of Voice AI
+          </motion.h1>
+
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+          >
+            Production-ready AI voice agents delivering human-quality conversations at enterprise scale with sub-second latency
+          </motion.p>
+
+          {/* Key Metrics */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+          >
+            {[
+              { label: "Latency", value: 800, prefix: "<", suffix: "ms", icon: Zap },
+              { label: "Uptime", value: 99.9, prefix: "", suffix: "%", icon: Shield },
+              { label: "Active Agents", value: 247, prefix: "", suffix: "+", icon: Users },
+              { label: "Market TAM", value: 24, prefix: "", suffix: "B", icon: Globe }
+            ].map((metric, i) => (
+              <Card key={i} className="bg-black/40 backdrop-blur-xl border-purple-500/30 hover-elevate">
+                <CardContent className="p-6 text-center">
+                  <metric.icon className="w-8 h-8 mx-auto mb-3 text-purple-400" />
+                  <div className="text-3xl font-bold text-white mb-1">
+                    {metric.prefix}
+                    <AnimatedCounter end={metric.value} suffix={metric.suffix} />
+                  </div>
+                  <div className="text-sm text-gray-400">{metric.label}</div>
+                </CardContent>
+              </Card>
+            ))}
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white shadow-lg shadow-purple-500/50"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              data-testid="button-investor-inquiry"
+            >
+              <Rocket className="w-5 h-5 mr-2" />
+              Schedule Investment Call
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+              onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              data-testid="button-try-demo"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Try Live Demo
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Problem/Solution Section */}
+      <AnimatedSection>
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-purple-600/20 text-purple-300 border-purple-500/30">
+                The Opportunity
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Transforming Customer Interactions
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Traditional call centers are expensive, inconsistent, and don't scale. Voicely changes everything.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* The Problem */}
+              <Card className="bg-gradient-to-br from-red-900/20 to-red-950/20 border-red-500/30 backdrop-blur-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-red-300 flex items-center gap-2">
+                    <Target className="w-6 h-6" />
+                    Traditional Challenges
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {[
+                    { problem: "High labor costs", detail: "$4,000-$8,000 per agent/month" },
+                    { problem: "Limited availability", detail: "Business hours only, no 24/7" },
+                    { problem: "Inconsistent quality", detail: "Human error, mood variability" },
+                    { problem: "Slow response times", detail: "Long wait times, abandoned calls" },
+                    { problem: "Poor scalability", detail: "Can't handle sudden volume spikes" }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 bg-black/30 rounded-lg">
+                      <div className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-red-400 text-sm">✗</span>
+                      </div>
+                      <div>
+                        <div className="text-white font-medium">{item.problem}</div>
+                        <div className="text-sm text-gray-400">{item.detail}</div>
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+
+              {/* The Solution */}
+              <Card className="bg-gradient-to-br from-green-900/20 to-green-950/20 border-green-500/30 backdrop-blur-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-green-300 flex items-center gap-2">
+                    <Sparkles className="w-6 h-6" />
+                    Voicely Solution
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {[
+                    { solution: "87% cost reduction", detail: "$500-$800 per agent/month all-in" },
+                    { solution: "True 24/7/365", detail: "Never miss a call, any timezone" },
+                    { solution: "Perfect consistency", detail: "Same quality every interaction" },
+                    { solution: "Sub-second responses", detail: "<800ms latency, feels human" },
+                    { solution: "Infinite scalability", detail: "Handle unlimited concurrent calls" }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 bg-black/30 rounded-lg">
+                      <div className="w-6 h-6 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                      </div>
+                      <div>
+                        <div className="text-white font-medium">{item.solution}</div>
+                        <div className="text-sm text-gray-400">{item.detail}</div>
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Technology Showcase */}
+      <AnimatedSection>
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-cyan-600/20 text-cyan-300 border-cyan-500/30">
+                Cutting-Edge Technology
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Optimized Voice Pipeline
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Ultra-low latency architecture delivering real-time conversations
+              </p>
+            </div>
+
+            {/* Tech Stack Flow */}
+            <div className="relative mb-12">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                {[
+                  { name: "Audio Input", icon: Mic, detail: "40ms chunks", color: "purple" },
+                  { name: "Speech-to-Text", icon: Brain, detail: "Deepgram STT", color: "cyan" },
+                  { name: "AI Processing", icon: Cpu, detail: "DeepSeek AI", color: "green" },
+                  { name: "Text-to-Speech", icon: MessageSquare, detail: "ElevenLabs", color: "purple" },
+                  { name: "Audio Output", icon: Phone, detail: "Instant playback", color: "cyan" }
+                ].map((tech, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <Card className="bg-black/60 backdrop-blur-xl border-purple-500/30 hover-elevate flex-1">
+                      <CardContent className="p-6 text-center">
+                        <tech.icon className={`w-10 h-10 mx-auto mb-3 text-${tech.color}-400`} />
+                        <div className="text-lg font-semibold text-white mb-1">{tech.name}</div>
+                        <div className="text-sm text-gray-400">{tech.detail}</div>
+                      </CardContent>
+                    </Card>
+                    {i < 4 && (
+                      <ChevronRight className="w-6 h-6 text-purple-500 hidden md:block flex-shrink-0" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Performance Highlights */}
+            <div className="grid md:grid-cols-4 gap-6">
+              {performanceMetrics.map((metric, i) => (
+                <Card key={i} className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border-purple-500/30 backdrop-blur-xl">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text mb-2">
+                      {metric.value}
+                    </div>
+                    <div className="text-sm text-gray-400">{metric.metric}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Live Demo Section */}
+      <AnimatedSection>
+        <section id="demo" className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-purple-600/20 text-purple-300 border-purple-500/30">
+                Experience It Yourself
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Talk to Alice - Live Demo
+              </h2>
+              <p className="text-xl text-gray-400">
+                Our demo support agent showcasing real-time voice AI capabilities
+              </p>
+            </div>
+
+            <Card className="bg-black/60 backdrop-blur-xl border-purple-500/30">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-cyan-600/30 to-purple-600/30 border-2 border-cyan-500/50 flex items-center justify-center">
+                    <img 
+                      src="https://res.cloudinary.com/dmbzcxhjn/image/upload/v1731959758/AI_customer_service_friendly_smile_0efbdc51_hvhf5s.png"
+                      alt="Alice"
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-2">Alice - Customer Support</h3>
+                  <p className="text-gray-400 mb-6">
+                    Experience natural conversation with sub-second response times
+                  </p>
+
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white shadow-lg shadow-purple-500/50"
+                    onClick={() => window.location.href = '/agent/demo-support-agent'}
+                    data-testid="button-start-demo"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    Start Conversation with Alice
+                  </Button>
+
+                  <div className="mt-8 grid grid-cols-3 gap-4 text-sm">
+                    <div className="p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                      <div className="text-purple-300 font-semibold">&lt; 800ms</div>
+                      <div className="text-gray-400">Response Time</div>
+                    </div>
+                    <div className="p-3 bg-cyan-900/20 rounded-lg border border-cyan-500/20">
+                      <div className="text-cyan-300 font-semibold">Natural</div>
+                      <div className="text-gray-400">Voice Quality</div>
+                    </div>
+                    <div className="p-3 bg-green-900/20 rounded-lg border border-green-500/20">
+                      <div className="text-green-300 font-semibold">24/7</div>
+                      <div className="text-gray-400">Always Available</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Market Opportunity */}
+      <AnimatedSection>
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-green-600/20 text-green-300 border-green-500/30">
+                Market Opportunity
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Massive Addressable Market
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Voice AI market projected to reach $24.6B by 2028
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Market Growth Chart */}
+              <Card className="bg-black/60 backdrop-blur-xl border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Market Growth Projection</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <LineChart data={marketGrowth}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+                      <XAxis dataKey="year" stroke="#888" />
+                      <YAxis stroke="#888" />
+                      <Tooltip
+                        contentStyle={{ backgroundColor: '#1a1a2e', border: '1px solid #8B5CF6' }}
+                        labelStyle={{ color: '#fff' }}
+                      />
+                      <Line type="monotone" dataKey="market" stroke="#8B5CF6" strokeWidth={2} name="Total Market ($B)" />
+                      <Line type="monotone" dataKey="voicely" stroke="#06B6D4" strokeWidth={2} name="Voicely Target ($B)" />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+
+              {/* TAM/SAM/SOM */}
+              <Card className="bg-black/60 backdrop-blur-xl border-cyan-500/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Market Sizing (2025)</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {[
+                    { label: "TAM (Total Addressable)", value: "$24.6B", desc: "Global voice AI market", color: "purple" },
+                    { label: "SAM (Serviceable Available)", value: "$8.2B", desc: "Enterprise & SMB segments", color: "cyan" },
+                    { label: "SOM (Serviceable Obtainable)", value: "$500M", desc: "Year 3 revenue target", color: "green" }
+                  ].map((item, i) => (
+                    <div key={i} className="p-4 bg-gradient-to-r from-black/40 to-black/20 rounded-lg border border-purple-500/20">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-gray-400 text-sm">{item.label}</span>
+                        <span className={`text-2xl font-bold text-${item.color}-400`}>{item.value}</span>
+                      </div>
+                      <p className="text-xs text-gray-500">{item.desc}</p>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Use Cases */}
+      <AnimatedSection>
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-purple-600/20 text-purple-300 border-purple-500/30">
+                Industry Applications
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Proven Across Industries
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Delivering measurable ROI in multiple high-value sectors
+              </p>
+            </div>
+
+            {/* Use Case Selector */}
+            <div className="flex flex-wrap gap-3 justify-center mb-8">
+              {Object.entries(useCases).map(([key, useCase]) => (
+                <Button
+                  key={key}
+                  variant={selectedUseCase === key ? "default" : "outline"}
+                  className={selectedUseCase === key 
+                    ? "bg-gradient-to-r from-purple-600 to-cyan-600 border-0" 
+                    : "border-purple-500/30 text-gray-300 hover:border-purple-500/50"
+                  }
+                  onClick={() => setSelectedUseCase(key)}
+                  data-testid={`button-usecase-${key}`}
+                >
+                  <useCase.icon className="w-4 h-4 mr-2" />
+                  {useCase.title}
+                </Button>
+              ))}
+            </div>
+
+            {/* Selected Use Case Details */}
+            {Object.entries(useCases).map(([key, useCase]) => selectedUseCase === key && (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border-purple-500/30 backdrop-blur-xl">
+                  <CardContent className="p-8">
+                    <div className="grid md:grid-cols-3 gap-6 mb-6">
+                      {Object.entries(useCase.stats).map(([statKey, value]) => (
+                        <div key={statKey} className="text-center p-4 bg-black/40 rounded-lg">
+                          <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text mb-1">
+                            {value}
+                          </div>
+                          <div className="text-sm text-gray-400 capitalize">{statKey.replace('-', ' ')}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-center text-lg text-gray-300">{useCase.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Key Features */}
+      <AnimatedSection>
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-cyan-600/20 text-cyan-300 border-cyan-500/30">
+                Platform Capabilities
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Enterprise-Ready Features
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: Users,
+                  title: "Fully Customizable",
+                  description: "Brand voice, personality, knowledge base - tailor every agent to your needs"
+                },
+                {
+                  icon: BarChart3,
+                  title: "Advanced Analytics",
+                  description: "Real-time sentiment analysis, call transcripts, performance metrics"
+                },
+                {
+                  icon: Shield,
+                  title: "Enterprise Security",
+                  description: "Bank-grade encryption, GDPR/HIPAA compliant, SOC 2 certified"
+                },
+                {
+                  icon: Zap,
+                  title: "Lightning Fast",
+                  description: "Sub-second response times create natural, human-like conversations"
+                },
+                {
+                  icon: Globe,
+                  title: "Multi-Language",
+                  description: "Support for 50+ languages with native pronunciation"
+                },
+                {
+                  icon: Building2,
+                  title: "API Access",
+                  description: "RESTful API and webhooks for seamless integration"
+                }
+              ].map((feature, i) => (
+                <Card key={i} className="bg-black/60 backdrop-blur-xl border-purple-500/30 hover-elevate">
+                  <CardContent className="p-6">
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-400">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Token Economy */}
+      <AnimatedSection>
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-purple-600/20 text-purple-300 border-purple-500/30">
+                $VOICE Token
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Token Economy
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Platform utility token powering the Voicely ecosystem
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Token Distribution */}
+              <Card className="bg-black/60 backdrop-blur-xl border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Token Distribution</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                      <Pie
+                        data={tokenDistribution}
+                        cx="50%"
+                        cy="50%"
+                        labelLine={false}
+                        label={({ name, value }) => `${name}: ${value}%`}
+                        outerRadius={100}
+                        fill="#8884d8"
+                        dataKey="value"
+                      >
+                        {tokenDistribution.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                      </Pie>
+                      <Tooltip 
+                        contentStyle={{ backgroundColor: '#1a1a2e', border: '1px solid #8B5CF6' }}
+                        labelStyle={{ color: '#fff' }}
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+
+              {/* Token Utility */}
+              <Card className="bg-black/60 backdrop-blur-xl border-cyan-500/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Token Utility</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {[
+                    { icon: DollarSign, label: "Platform Payments", desc: "Pay for agent usage and premium features" },
+                    { icon: TrendingUp, label: "Staking Rewards", desc: "Earn rewards by staking tokens" },
+                    { icon: Users, label: "Governance", desc: "Vote on platform developments" },
+                    { icon: Sparkles, label: "Premium Access", desc: "Unlock exclusive features and agents" }
+                  ].map((utility, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 bg-gradient-to-r from-black/40 to-black/20 rounded-lg border border-cyan-500/20">
+                      <utility.icon className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-white font-medium">{utility.label}</div>
+                        <div className="text-sm text-gray-400">{utility.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Investment CTA */}
+      <AnimatedSection>
+        <section id="contact" className="py-20 px-4 bg-gradient-to-br from-purple-900/20 via-black/40 to-cyan-900/20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-purple-600/20 text-purple-300 border-purple-500/30">
+                Join Us
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                Partner with Voicely
+              </h2>
+              <p className="text-xl text-gray-400">
+                Be part of the voice AI revolution. Schedule a call with our team.
+              </p>
+            </div>
+
+            <Card className="bg-black/60 backdrop-blur-xl border-purple-500/30">
+              <CardContent className="p-8">
+                <form className="space-y-6" onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+
+                  try {
+                    await apiRequest('POST', '/api/waitlist', {
+                      name: formData.name,
+                      email: formData.email,
+                      company: formData.company,
+                      message: formData.message,
+                      source: 'investor_page'
+                    });
+
+                    toast({
+                      title: "Request Submitted!",
+                      description: "Our team will contact you within 24 hours to discuss investment opportunities.",
+                    });
+
+                    // Clear form
+                    setFormData({
+                      name: "",
+                      email: "",
+                      company: "",
+                      message: ""
+                    });
+                  } catch (error) {
+                    console.error('[INVESTOR-FORM] Submission error:', error);
+                    toast({
+                      variant: "destructive",
+                      title: "Submission Failed",
+                      description: "Please try again or contact us directly at invest@voicelyagent.ai",
+                    });
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <Input
+                        required
+                        placeholder="John Doe"
+                        className="bg-black/40 border-purple-500/30 text-white"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        data-testid="input-investor-name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <Input
+                        required
+                        type="email"
+                        placeholder="john@company.com"
+                        className="bg-black/40 border-purple-500/30 text-white"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        data-testid="input-investor-email"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Company / Fund
+                    </label>
+                    <Input
+                      placeholder="Acme Ventures"
+                      className="bg-black/40 border-purple-500/30 text-white"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      data-testid="input-investor-company"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Message
+                    </label>
+                    <Textarea
+                      placeholder="Tell us about your interest in Voicely..."
+                      rows={4}
+                      className="bg-black/40 border-purple-500/30 text-white resize-none"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      data-testid="input-investor-message"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white shadow-lg shadow-purple-500/50"
+                    data-testid="button-investor-inquiry"
+                  >
+                    <Rocket className="w-5 h-5 mr-2" />
+                    {isSubmitting ? "Submitting..." : "Schedule Investment Call"}
+                  </Button>
+                </form>
+
+                <div className="mt-8 pt-8 border-t border-purple-500/20 text-center">
+                  <p className="text-gray-400 mb-4">Or reach us directly:</p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                    <a href="mailto:invest@voicelyagent.ai" className="text-purple-400 hover:text-purple-300">
+                      invest@voicelyagent.ai
+                    </a>
+                    <span className="hidden sm:inline text-gray-600">•</span>
+                    <span className="text-gray-400">San Francisco, CA</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 border-t border-purple-500/20">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
+          <p>© 2025 Voicely Agent. All rights reserved.</p>
+          <p className="mt-2">The Future of Voice AI is Here</p>
+        </div>
+      </footer>
+    </div>
+  );
+}

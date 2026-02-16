@@ -1,0 +1,1613 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Coins, TrendingUp, Users, Lock, Zap, ExternalLink, BarChart3, DollarSign, Globe, Repeat, Phone, Flame, ArrowDownCircle, Sparkles, CheckCircle, AlertTriangle, Book, Code, Cpu, Database, MessageSquare, Shield, Terminal } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useAuth } from "@/hooks/useAuth";
+import voicelyLogo from "@assets/0af78963-cafd-4bbd-9991-0ba6481573b0-removebg-preview_1762954092709.png";
+
+export default function MobileToken() {
+  const { isLoading } = useAuth();
+  const [activeTab, setActiveTab] = useState("overview");
+
+  // Show loading state while checking auth
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#0A0B1E] flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-gray-600/50 border-t-purple-500 rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-400">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  const distribution = [
+    { label: "Public Sale", percentage: 40, color: "from-purple-600 to-violet-600" },
+    { label: "Team & Advisors", percentage: 20, color: "from-cyan-600 to-blue-600" },
+    { label: "Treasury", percentage: 25, color: "from-green-600 to-emerald-600" },
+    { label: "Ecosystem", percentage: 15, color: "from-orange-600 to-red-600" },
+  ];
+
+  const flywheelSteps = [
+    {
+      icon: DollarSign,
+      title: "Revenue Generated",
+      description: "AI agents handle calls & conversations",
+      color: "#10B981",
+    },
+    {
+      icon: TrendingUp,
+      title: "Auto-Convert to $VOICE",
+      description: "10% of revenue converts automatically",
+      color: "#3B82F6",
+    },
+    {
+      icon: Flame,
+      title: "Buyback & Burn",
+      description: "Tokens permanently removed from circulation",
+      color: "#EF4444",
+    },
+    {
+      icon: ArrowDownCircle,
+      title: "Shrinking Supply",
+      description: "Scarcity increases with platform growth",
+      color: "#8B5CF6",
+    },
+    {
+      icon: Users,
+      title: "Increased Value",
+      description: "Holders benefit from platform success",
+      color: "#EC4899",
+    },
+  ];
+
+  const tokenomicsFeatures = [
+    {
+      icon: Flame,
+      title: "Auto-Burn Mechanism",
+      description: "10% of all platform revenue automatically converts to $VOICE and burns forever, creating permanent scarcity",
+      stat: "10%",
+    },
+    {
+      icon: TrendingUp,
+      title: "Deflationary Model",
+      description: "As the platform grows, more tokens are burned. Supply shrinks while demand increases",
+      stat: "∞",
+    },
+    {
+      icon: Lock,
+      title: "Team Vesting",
+      description: "12-month linear vesting ensures long-term alignment between team and token holders",
+      stat: "12M",
+    },
+    {
+      icon: Users,
+      title: "Community First",
+      description: "60% of total supply allocated to public distribution and ecosystem development",
+      stat: "60%",
+    },
+  ];
+
+  const utilities = [
+    {
+      icon: Zap,
+      title: "Pay for AI Calls",
+      description: "Use $VOICE tokens to power your AI agent calls",
+      color: "from-purple-600 to-violet-600",
+      stat: "0.1 VOICE/min",
+    },
+    {
+      icon: TrendingUp,
+      title: "Earn Rewards",
+      description: "Stake tokens to earn 12% APY from platform revenue",
+      color: "from-cyan-600 to-blue-600",
+      stat: "12% APY",
+    },
+    {
+      icon: Users,
+      title: "Governance Rights",
+      description: "Vote on platform features and protocol upgrades",
+      color: "from-green-600 to-emerald-600",
+      stat: "1 Token = 1 Vote",
+    },
+    {
+      icon: Lock,
+      title: "Premium Access",
+      description: "Unlock exclusive features and priority support",
+      color: "from-orange-600 to-red-600",
+      stat: "5K+ Tokens",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#0A0B1E] pb-28 md:pb-8 relative">
+      <div className="max-w-6xl mx-auto md:px-8">
+      {/* Safe Area Support */}
+      <div className="h-safe-top" />
+
+      {/* Header - Compact Hero Section with Pulsing Animation */}
+      <div className="min-h-[45vh] px-4 pt-16 pb-6 bg-gradient-to-b from-purple-900/30 via-purple-900/10 to-transparent relative z-10 flex flex-col items-center justify-center text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col items-center relative"
+        >
+          {/* Animated Pulsing Rings */}
+          <div className="relative mb-6">
+            {/* Outer pulsing ring - Larger */}
+            <motion.div
+              className="absolute rounded-full border-2 border-gray-600/50"
+              style={{
+                width: "280px",
+                height: "280px",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+              animate={{
+                scale: [1, 1.15, 1],
+                opacity: [0.5, 0.2, 0.5],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            
+            {/* Middle pulsing ring - Larger */}
+            <motion.div
+              className="absolute rounded-full border-2 border-cyan-500/40"
+              style={{
+                width: "240px",
+                height: "240px",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.6, 0.3, 0.6],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            />
+            
+            {/* Token Icon with Enhanced Glow - MUCH Larger */}
+            <motion.div 
+              className="rounded-full flex items-center justify-center p-4 shadow-2xl relative"
+              style={{
+                width: "200px",
+                height: "200px",
+                boxShadow: "0 0 100px rgba(139,92,246,0.8), 0 0 150px rgba(6,182,212,0.5), inset 0 0 50px rgba(139,92,246,0.4)",
+                background: "radial-gradient(circle, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.15) 50%, transparent 100%)",
+              }}
+              animate={{
+                boxShadow: [
+                  "0 0 100px rgba(139,92,246,0.8), 0 0 150px rgba(6,182,212,0.5)",
+                  "0 0 120px rgba(139,92,246,1), 0 0 180px rgba(6,182,212,0.7)",
+                  "0 0 100px rgba(139,92,246,0.8), 0 0 150px rgba(6,182,212,0.5)",
+                ],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <motion.img 
+                src={voicelyLogo} 
+                alt="VOICE Token" 
+                className="w-full h-full object-contain drop-shadow-2xl"
+                animate={{
+                  rotate: [0, 5, 0, -5, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.div>
+          </div>
+          
+          {/* Token Name with Shimmer Effect */}
+          <motion.h1 
+            className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-400 mb-2"
+            style={{
+              fontSize: "clamp(2.25rem, 9vw, 3.5rem)",
+              lineHeight: "1.1",
+            }}
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            $VOICE
+          </motion.h1>
+          
+          {/* Subtitle */}
+          <p 
+            className="text-gray-200 font-semibold mb-3"
+            style={{
+              fontSize: "clamp(0.9rem, 3.5vw, 1.1rem)",
+            }}
+          >
+            Solana SPL Token
+          </p>
+          
+          {/* Coming Soon Badge with Pulse */}
+          <motion.div
+            animate={{
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Badge 
+              variant="outline" 
+              className="border-cyan-500/50 text-gray-200 bg-cyan-500/20 font-semibold text-sm px-5 py-1.5 backdrop-blur-xl shadow-lg"
+            >
+              Coming Soon
+            </Badge>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Tabs */}
+      <div className="px-4 relative z-10">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full overflow-visible">
+          <TabsList className="grid w-full grid-cols-3 mb-6 bg-black/60 p-1 rounded-2xl border border-gray-600/50">
+            <TabsTrigger 
+              value="overview" 
+              className="rounded-xl text-xs data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600/30 data-[state=active]:to-violet-600/30 data-[state=active]:text-gray-200" 
+              data-testid="tab-overview"
+            >
+              Overview
+            </TabsTrigger>
+            <TabsTrigger 
+              value="tokenomics" 
+              className="rounded-xl text-xs data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600/30 data-[state=active]:to-violet-600/30 data-[state=active]:text-gray-200" 
+              data-testid="tab-tokenomics"
+            >
+              Tokenomics
+            </TabsTrigger>
+            <TabsTrigger 
+              value="docs" 
+              className="rounded-xl text-xs data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600/30 data-[state=active]:to-violet-600/30 data-[state=active]:text-gray-200" 
+              data-testid="tab-docs"
+            >
+              Docs
+            </TabsTrigger>
+          </TabsList>
+
+          {/* Overview Tab */}
+          <TabsContent value="overview" className="space-y-6">
+            {/* Distribution Chart */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <BarChart3 className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">TOKEN_DISTRIBUTION</h3>
+              </div>
+              
+              {/* Visual Distribution Bars */}
+              <div className="space-y-3">
+                {distribution.map((item, i) => (
+                  <div key={item.label}>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-300 font-medium">{item.label}</span>
+                      <span className="text-sm font-semibold text-gray-200">{item.percentage}%</span>
+                    </div>
+                    <div className="h-3 bg-black/60 rounded-full overflow-hidden border border-gray-800/50">
+                      <motion.div
+                        className={`h-full bg-gradient-to-r ${item.color} rounded-full`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${item.percentage}%` }}
+                        transition={{ duration: 1.5, delay: 0.6 + i * 0.15, ease: "easeOut" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Animated Flywheel */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <Repeat className="w-5 h-5 text-gray-400" />
+                  <h4 className="text-base font-semibold text-gray-200">Flywheel Mechanism</h4>
+                </div>
+                
+                {/* Flywheel Steps */}
+                <div className="space-y-3">
+                  {[
+                    { icon: Phone, text: "AI Agents handle calls" },
+                    { icon: DollarSign, text: "Platform generates revenue" },
+                    { icon: TrendingUp, text: "50% distributed to holders" },
+                    { icon: Repeat, text: "Increased token demand" },
+                  ].map((step, i) => {
+                    const Icon = step.icon;
+                    return (
+                      <motion.div
+                        key={i}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-purple-500/20"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1 + i * 0.1 }}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-white/5">
+                          <Icon className="w-5 h-5 text-gray-200" />
+                        </div>
+                        <p className="text-sm text-gray-300">{step.text}</p>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Contract Address */}
+            <motion.div
+              className="p-4 rounded-2xl bg-black/80 border border-gray-600/50 backdrop-blur-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <Globe className="w-3 h-3 text-gray-500" />
+                <p className="text-xs text-gray-500 font-mono">CONTRACT_ADDRESS</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <code className="flex-1 text-sm text-gray-400 bg-black/60 px-3 py-2 rounded-lg font-mono overflow-x-auto border border-purple-500/20">
+                  VoiCE...xyz123
+                </code>
+                <Button size="sm" variant="outline" className="border-gray-600/50 hover:bg-gray-700/30">
+                  <ExternalLink className="w-3 h-3" />
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Token Utility Section */}
+            <motion.div
+              className="mt-6 space-y-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <Zap className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">TOKEN_UTILITY</h3>
+              </div>
+              {utilities.map((utility, i) => {
+                const Icon = utility.icon;
+                
+                return (
+                  <motion.div
+                    key={utility.title}
+                    className="p-6 rounded-lg bg-white/5 border border-gray-700/50 relative overflow-hidden"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 1.5 + i * 0.1 }}
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {/* Gradient Background */}
+                    <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${utility.color} opacity-10 blur-2xl`} />
+                    
+                    <div className="relative flex items-start gap-4">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${utility.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="text-base font-semibold text-gray-200">{utility.title}</h4>
+                          <Badge variant="outline" className={`text-xs border-gray-600/50 text-gray-400 bg-gray-700/30`}>
+                            {utility.stat}
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-gray-400 leading-relaxed">{utility.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </TabsContent>
+
+          {/* Tokenomics Tab - Detailed Deep Dive */}
+          <TabsContent value="tokenomics" className="space-y-6">
+            {/* Revenue Flywheel Title */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-500/40 backdrop-blur-xl mb-3">
+                <Repeat className="w-5 h-5 text-orange-400" />
+                <span className="text-sm font-medium text-gray-200 uppercase tracking-wider">
+                  How It Works
+                </span>
+              </div>
+              <h3 className="font-display text-2xl font-semibold text-gray-200 mb-2">
+                Revenue Fuels Token Value
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Every conversation burns $VOICE tokens forever, creating permanent scarcity
+              </p>
+            </motion.div>
+
+            {/* 5-Step Flywheel */}
+            <div className="space-y-3">
+              {flywheelSteps.map((step, i) => {
+                const Icon = step.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    className="p-4 rounded-2xl bg-white/5 border border-gray-700/50"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    data-testid={`flywheel-step-${i + 1}`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div 
+                        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                        style={{
+                          backgroundColor: step.color,
+                          boxShadow: `0 0 20px ${step.color}60`,
+                        }}
+                      >
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-1">
+                          <h4 className="text-base font-semibold text-gray-200">{step.title}</h4>
+                          <Badge variant="outline" className="text-xs border-gray-600/50 bg-gray-700/30">
+                            Step {i + 1}
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-gray-400">{step.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Tokenomics Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mt-6"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <Sparkles className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100 uppercase">TOKENOMICS_FEATURES</h3>
+              </div>
+              
+              <div className="space-y-3">
+                {tokenomicsFeatures.map((feature, i) => {
+                  const Icon = feature.icon;
+                  return (
+                    <motion.div
+                      key={i}
+                      className="p-6 rounded-lg bg-white/5 border border-gray-700/50 relative"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.7 + i * 0.1 }}
+                      data-testid={`tokenomics-feature-${i}`}
+                    >
+                      {/* Stat Badge */}
+                      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 border border-gray-700/50">
+                        <span className="text-sm font-semibold text-gray-200">{feature.stat}</span>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-white/10 border border-gray-700/50 flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-6 h-6 text-gray-300" />
+                        </div>
+                        <div className="flex-1 pr-16">
+                          <h4 className="text-base font-semibold text-gray-100 mb-2">{feature.title}</h4>
+                          <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Token Supply Info */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Coins className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">SUPPLY_METRICS</h3>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3">
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <p className="text-xs text-gray-500 font-mono mb-1">TOTAL_SUPPLY</p>
+                  <p className="text-lg text-gray-200 font-bold">1B</p>
+                  <p className="text-xs text-gray-400">$VOICE Tokens</p>
+                </div>
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <p className="text-xs text-gray-500 font-mono mb-1">CIRCULATING</p>
+                  <p className="text-lg text-gray-200 font-bold">TBD</p>
+                  <p className="text-xs text-gray-400">At Launch</p>
+                </div>
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <p className="text-xs text-gray-500 font-mono mb-1">BURNED</p>
+                  <p className="text-lg text-gray-200 font-bold">0</p>
+                  <p className="text-xs text-gray-400">Post-Launch</p>
+                </div>
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <p className="text-xs text-gray-500 font-mono mb-1">NETWORK</p>
+                  <p className="text-lg text-gray-200 font-bold">Solana</p>
+                  <p className="text-xs text-gray-400">SPL Token</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Vesting Schedule */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Lock className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">VESTING_SCHEDULE</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-sm text-gray-300">Public Sale</span>
+                  </div>
+                  <span className="text-xs text-gray-400 font-mono">No Vesting</span>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center gap-2">
+                    <Lock className="w-5 h-5 text-gray-400" />
+                    <span className="text-sm text-gray-300">Team & Advisors</span>
+                  </div>
+                  <span className="text-xs text-gray-400 font-mono">12M Linear</span>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center gap-2">
+                    <Lock className="w-5 h-5 text-green-400" />
+                    <span className="text-sm text-gray-300">Treasury</span>
+                  </div>
+                  <span className="text-xs text-gray-400 font-mono">2Y Linear</span>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-orange-400" />
+                    <span className="text-sm text-gray-300">Ecosystem</span>
+                  </div>
+                  <span className="text-xs text-gray-400 font-mono">Released</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Future Utility Roadmap */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Sparkles className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">FUTURE_UTILITY</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-purple-500/20">
+                  <div className="w-10 h-10 rounded-lg bg-white/5">
+                    <TrendingUp className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-200 mb-1">Advanced Staking</h4>
+                    <p className="text-xs text-gray-400">Lock tokens for higher APY tiers and exclusive platform rewards</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-cyan-500/20">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-200 mb-1">DAO Governance</h4>
+                    <p className="text-xs text-gray-400">Vote on feature development, partnerships, and treasury allocation</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-green-500/20">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-200 mb-1">Enterprise Tiers</h4>
+                    <p className="text-xs text-gray-400">Hold tokens to unlock volume discounts and priority agent deployment</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-orange-500/20">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center flex-shrink-0">
+                    <Coins className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-200 mb-1">Liquidity Mining</h4>
+                    <p className="text-xs text-gray-400">Provide liquidity on DEXs to earn bonus $VOICE rewards</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Compliance Disclaimer */}
+            <motion.div
+              className="p-4 rounded-2xl bg-gray-700/30 border border-gray-600/50 backdrop-blur-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.7 }}
+            >
+              <div className="flex items-start gap-2">
+                <AlertTriangle className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                <p className="text-xs text-gray-200 leading-relaxed">
+                  <span className="font-bold">Important Disclaimer:</span> $VOICE is a utility token for the Voicely platform. This information is not financial advice. Cryptocurrency investments carry risk. Always do your own research and only invest what you can afford to lose. Token details subject to change.
+                </p>
+              </div>
+            </motion.div>
+          </TabsContent>
+
+          {/* Docs Tab - GitBook Style Documentation */}
+          <TabsContent value="docs" className="space-y-6 overflow-visible">
+            {/* Executive Summary */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50 overflow-visible"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-purple-500/20">
+                <Book className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                <h3 className="text-xl font-semibold text-gray-100 flex-1">Executive Summary</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-base font-semibold text-gray-100 mb-3 break-words">Voicely Agent Platform</h4>
+                  <p className="text-sm text-gray-300 leading-relaxed mb-4">
+                    Voicely Agent is an ultra-premium, production-ready AI voice workforce platform designed to revolutionize customer interaction through human-like AI agents. The platform provides real-time voice conversations with perceived latency under 350ms, making interactions indistinguishable from human-to-human communication.
+                  </p>
+                  <div className="p-4 rounded-lg bg-black/20 border-l-4 border-gray-600 mb-4">
+                    <h5 className="text-sm font-semibold text-gray-200 mb-2">Core Mission</h5>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      To empower businesses with AI voice agents that handle customer service, sales, appointments, and follow-ups 24/7 with human-level intelligence and natural conversation flow. Every conversation burns $VOICE tokens, creating a deflationary economy that grows with platform success.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                      <span className="text-sm text-gray-400">Launch Status</span>
+                      <span className="text-sm font-medium text-gray-200">Production Ready</span>
+                    </div>
+                    <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                      <span className="text-sm text-gray-400">Target Latency</span>
+                      <span className="text-sm font-medium text-gray-200">&lt;350ms</span>
+                    </div>
+                    <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                      <span className="text-sm text-gray-400">Uptime SLA</span>
+                      <span className="text-sm font-medium text-gray-200">99.9%</span>
+                    </div>
+                    <div className="flex items-center justify-between py-2">
+                      <span className="text-sm text-gray-400">Deployment</span>
+                      <span className="text-sm font-medium text-gray-200">Cloud Native</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Market Opportunity */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-purple-500/20">
+                <TrendingUp className="w-5 h-5 text-purple-400" />
+                <h3 className="text-xl font-semibold text-gray-100">Market Opportunity</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  The AI voice automation market represents a multi-billion dollar opportunity. Traditional call centers cost businesses $300B+ annually, while AI voice agents can reduce costs by 70% while improving availability to 24/7.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                    <span className="text-sm text-gray-400">Call Center Market</span>
+                    <span className="text-lg font-semibold text-gray-100">$300B+</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                    <span className="text-sm text-gray-400">Cost Reduction</span>
+                    <span className="text-lg font-semibold text-gray-100">70%</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-700/50">
+                    <span className="text-sm text-gray-400">Availability</span>
+                    <span className="text-lg font-semibold text-gray-100">24/7</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2">
+                    <span className="text-sm text-gray-400">Scalability</span>
+                    <span className="text-lg font-semibold text-gray-100">Unlimited</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Voice Pipeline Architecture */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-purple-500/20">
+                <Zap className="w-5 h-5 text-purple-400" />
+                <h3 className="text-xl font-semibold text-gray-100">Voice Pipeline Architecture</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-base font-semibold text-gray-200 mb-3">Ultra-Low Latency Pipeline</h4>
+                  <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+                    The voice pipeline is engineered for sub-350ms perceived latency through aggressive optimization at every layer. Audio flows through a five-stage pipeline optimized for streaming and parallelization.
+                  </p>
+                  <div className="p-4 rounded-md bg-purple-500/5 border border-purple-500/20 mb-4 font-mono text-sm text-purple-200">
+                    Audio → Deepgram STT → DeepSeek AI → ElevenLabs TTS → Audio Output
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="text-lg font-semibold text-gray-100">1. Audio Capture</h5>
+                      <Badge variant="outline" className="text-xs border-gray-600/50 text-gray-400 bg-gray-700/30">
+                        Multi-Platform
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      <span className="font-semibold text-gray-200">Desktop/Android:</span> MediaRecorder API with WebM/Opus encoding for optimal compression and quality.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      <span className="font-semibold text-gray-200">iOS Safari:</span> Web Audio API with PCM16 encoding. Automatic fallback detection ensures 100% mobile compatibility.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      <span className="font-semibold text-gray-200">Buffer:</span> 1024 samples for minimal latency while maintaining audio quality.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="text-lg font-semibold text-gray-100">2. Speech-to-Text (Deepgram)</h5>
+                      <Badge variant="outline" className="text-xs border-gray-600/50 text-green-400 bg-gray-700/30">
+                        200ms Endpoint
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      Deepgram's Nova-2 model with aggressive endpointing (200ms) and utterance detection (150ms timeout) for instant transcript delivery.
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 mt-2">
+                      <div className="p-2 rounded bg-black/40 border border-gray-700/30">
+                        <p className="text-xs text-gray-500">Endpointing</p>
+                        <p className="text-sm font-medium text-gray-200">200ms</p>
+                      </div>
+                      <div className="p-2 rounded bg-black/40 border border-gray-700/30">
+                        <p className="text-xs text-gray-500">Utterance</p>
+                        <p className="text-sm font-medium text-gray-200">150ms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="text-sm font-semibold text-gray-200">3. AI Processing (DeepSeek)</h5>
+                      <Badge variant="outline" className="text-xs border-gray-600/50 text-gray-400 bg-gray-700/30">
+                        Streaming
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      DeepSeek-chat with streaming enabled. 150 max tokens, temperature 0.6 for natural yet focused responses.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      <span className="font-semibold text-gray-200">Sliding Window:</span> Maintains last 8 messages for context while preventing token overflow. Automatic trimming logs in real-time.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="text-sm font-semibold text-gray-200">4. Voice Synthesis (ElevenLabs)</h5>
+                      <Badge variant="outline" className="text-xs border-gray-600/50 text-gray-400 bg-gray-700/30">
+                        Turbo v2.5
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      ElevenLabs eleven_turbo_v2.5 model with optimize_streaming_latency=4 for maximum speed without quality loss.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      <span className="font-semibold text-gray-200">Two-Phase Streaming:</span> First audio chunk at 300-400ms provides instant feedback while full response generates.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="text-sm font-semibold text-gray-200">5. Audio Playback</h5>
+                      <Badge variant="outline" className="text-xs border-gray-600/50 text-green-400 bg-gray-700/30">
+                        Instant
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      Base64-decoded MP3 played through HTML5 Audio API. Zero-delay playback on first chunk arrival. Automatic audio unlock for mobile browsers.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-md bg-purple-500/5 border-l-4 border-purple-500">
+                  <h5 className="text-base font-semibold text-purple-200 mb-2">ZERO LAG Mode</h5>
+                  <p className="text-sm text-gray-300 leading-relaxed">
+                    Responds to single words (≥2 chars) or short utterances (≤12 chars) immediately without waiting for full sentence. Creates perception of instant, human-like responsiveness.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Core Technology Stack */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Code className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">Technology Stack</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Frontend Stack</h4>
+                  <div className="space-y-2">
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">React 18 + TypeScript</h5>
+                      <p className="text-xs text-gray-400">Modern React with full TypeScript support, hooks, and suspense for optimal performance</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Vite Build System</h5>
+                      <p className="text-xs text-gray-400">Lightning-fast HMR and optimized production builds with code splitting</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">TanStack Query v5</h5>
+                      <p className="text-xs text-gray-400">Server state management with automatic caching, revalidation, and optimistic updates</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Socket.IO Client</h5>
+                      <p className="text-xs text-gray-400">Real-time bidirectional voice streaming with automatic reconnection</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Framer Motion</h5>
+                      <p className="text-xs text-gray-400">Fluid animations and transitions for premium mobile UX</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Tailwind CSS + shadcn/ui</h5>
+                      <p className="text-xs text-gray-400">Utility-first styling with high-quality accessible components</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Backend Stack</h4>
+                  <div className="space-y-2">
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Express.js + TypeScript</h5>
+                      <p className="text-xs text-gray-400">Production-grade Node.js server with full type safety</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">PostgreSQL (Neon)</h5>
+                      <p className="text-xs text-gray-400">Serverless Postgres with instant scaling and automatic backups</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Drizzle ORM</h5>
+                      <p className="text-xs text-gray-400">Type-safe SQL with zero runtime overhead and automatic migrations</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Passport.js + Replit OIDC</h5>
+                      <p className="text-xs text-gray-400">Production OAuth2 with session management and CSRF protection</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Socket.IO Server</h5>
+                      <p className="text-xs text-gray-400">Real-time voice streaming with room-based sessions and error recovery</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <h5 className="text-sm font-medium text-gray-200 mb-1">Winston Logger</h5>
+                      <p className="text-xs text-gray-400">Structured logging with levels, timestamps, and error tracking</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">AI Services Integration</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="p-3 rounded-xl bg-white/5">
+                      <div className="flex items-center gap-2 mb-1">
+                        <MessageSquare className="w-5 h-5 text-gray-400" />
+                        <h5 className="text-sm font-medium text-gray-200">Deepgram Nova-2</h5>
+                      </div>
+                      <p className="text-xs text-gray-400">State-of-the-art STT with 200ms endpointing, streaming, and multi-language support</p>
+                    </div>
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-600/10 to-blue-600/10 border border-cyan-500/20">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Cpu className="w-5 h-5 text-gray-400" />
+                        <h5 className="text-sm font-medium text-gray-200">DeepSeek Chat</h5>
+                      </div>
+                      <p className="text-xs text-gray-400">Advanced LLM with streaming responses, conversation context, and prompt generation</p>
+                    </div>
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/20">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Zap className="w-5 h-5 text-green-400" />
+                        <h5 className="text-sm font-medium text-gray-200">ElevenLabs Turbo v2.5</h5>
+                      </div>
+                      <p className="text-xs text-gray-400">Ultra-fast TTS with 7 premium voices, emotion control, and streaming synthesis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Performance Metrics */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Terminal className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">PERFORMANCE_SPECS</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="p-4 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-lg font-semibold text-gray-100">Voice Latency</span>
+                    <Badge variant="outline" className="text-xs border-green-500/40 text-gray-200 bg-green-500/20">
+                      Ultra-Fast
+                    </Badge>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-white">&lt;350ms</span>
+                    <span className="text-xs text-gray-400">perceived end-to-end</span>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-2">
+                    From speech input to audio response. Industry-leading performance optimized for natural conversation flow.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-lg font-semibold text-gray-100">First Audio Chunk</span>
+                    <Badge variant="outline" className="text-xs border-green-500/40 text-gray-200 bg-green-500/20">
+                      Instant
+                    </Badge>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-white">300-400ms</span>
+                    <span className="text-xs text-gray-400">to first audio</span>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-2">
+                    Two-phase streaming ensures instant feedback while full response generates in background.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-gray-200">Silence Detection</span>
+                    <Badge variant="outline" className="text-xs border-purple-500/40 text-gray-200 bg-purple-500/20">
+                      Optimized
+                    </Badge>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-white">200ms</span>
+                    <span className="text-xs text-gray-400">endpoint detection</span>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-2">
+                    Deepgram's advanced endpointing with 150ms utterance timeout for zero-lag responsiveness.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-gray-200">Mobile Compatibility</span>
+                    <Badge variant="outline" className="text-xs border-green-500/40 text-gray-200 bg-green-500/20">
+                      Native
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-gray-300 mb-2">
+                    Fully optimized for iOS Safari and Android browsers
+                  </p>
+                  <p className="text-xs text-gray-400">
+                    Automatic fallback to Web Audio API with PCM16 encoding for iOS. MediaRecorder with WebM/Opus for desktop/Android.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Key Features */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Sparkles className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">PLATFORM_FEATURES</h3>
+              </div>
+              
+              <div className="space-y-2">
+                {[
+                  { icon: Zap, title: "Agent Studio", desc: "Create custom AI agents with personality, voice selection, and AI-powered prompt generation" },
+                  { icon: BarChart3, title: "Voice Analytics", desc: "Comprehensive session tracking with sentiment analysis and conversation insights" },
+                  { icon: Users, title: "Command Center", desc: "Real-time dashboard monitoring active agents, calls, and success metrics" },
+                  { icon: Shield, title: "Enterprise Security", desc: "IDOR protection, session management, CSP headers, and input validation" },
+                  { icon: Database, title: "Voice Logs", desc: "Complete transcript history with searchable conversation records" },
+                  { icon: Phone, title: "Multi-Session Support", desc: "Voice-only, text-only, or hybrid voice+text conversation modes" },
+                ].map((feature, i) => {
+                  const Icon = feature.icon;
+                  return (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-black/40 border border-gray-700/30 hover-elevate">
+                      <Icon className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-200">{feature.title}</h4>
+                        <p className="text-xs text-gray-400">{feature.desc}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Architecture & Design */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Code className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">SYSTEM_ARCHITECTURE</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Frontend</h4>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {["React 18", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "shadcn/ui", "Socket.IO", "TanStack Query"].map(tech => (
+                      <Badge key={tech} variant="outline" className="text-xs border-gray-600/50 text-gray-200 bg-gray-700/30">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Backend</h4>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {["Express.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Passport.js", "Winston", "Socket.IO", "Helmet"].map(tech => (
+                      <Badge key={tech} variant="outline" className="text-xs border-gray-600/50 text-gray-200 bg-gray-700/30">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Voice Pipeline</h4>
+                  <p className="text-xs text-gray-300 mb-2 font-mono bg-black/60 p-3 rounded-lg border border-gray-700">
+                    Audio Input → Deepgram STT → DeepSeek AI → ElevenLabs TTS → Audio Output
+                  </p>
+                  <p className="text-xs text-gray-400">
+                    Ultra-optimized streaming pipeline with sliding window conversation management (8 message limit) and defensive error handling.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Design System</h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <p className="text-xs text-gray-400 mb-1">Primary</p>
+                      <p className="text-sm font-medium text-gray-200">Purple/Violet</p>
+                    </div>
+                    <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                      <p className="text-xs text-gray-400 mb-1">Accent</p>
+                      <p className="text-sm font-medium text-gray-200">Cyan/Blue</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-2">
+                    Dark navy background (#0A0B1E) with glassmorphism effects, gradient accents, and terminal-style interfaces.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Database Architecture */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Database className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">DATABASE_SCHEMA</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-gray-300">
+                  PostgreSQL database with Drizzle ORM provides type-safe queries and automatic migrations. Complete schema rollback support integrated.
+                </p>
+
+                <div className="space-y-2">
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-medium text-gray-200 mb-2">users</h5>
+                    <div className="text-xs text-gray-400 space-y-1 font-mono">
+                      <p>• id (varchar, UUID primary key)</p>
+                      <p>• email, username (unique)</p>
+                      <p>• role (user/admin)</p>
+                      <p>• createdAt, updatedAt timestamps</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-medium text-gray-200 mb-2">agents</h5>
+                    <div className="text-xs text-gray-400 space-y-1 font-mono">
+                      <p>• id, userId (foreign key)</p>
+                      <p>• name, type (sales/support/scheduling)</p>
+                      <p>• businessName, businessUrl, phoneNumber</p>
+                      <p>• voice, voiceId, personality, systemPrompt</p>
+                      <p>• callsHandled, successRate metrics</p>
+                      <p>• avatarUrl, avatarStyle customization</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-medium text-gray-200 mb-2">voiceSessions</h5>
+                    <div className="text-xs text-gray-400 space-y-1 font-mono">
+                      <p>• id, userId, agentId (foreign keys)</p>
+                      <p>• mode (voice/text/hybrid)</p>
+                      <p>• transcript (JSON conversation log)</p>
+                      <p>• startedAt, endedAt, duration</p>
+                      <p>• sentiment, averageSentiment</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-medium text-gray-200 mb-2">userStats, activities</h5>
+                    <div className="text-xs text-gray-400 space-y-1 font-mono">
+                      <p>• Real-time analytics tracking</p>
+                      <p>• Activity logs with timestamps</p>
+                      <p>• Performance metrics aggregation</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-medium text-gray-200 mb-2">leads, campaigns</h5>
+                    <div className="text-xs text-gray-400 space-y-1 font-mono">
+                      <p>• CRM system integration</p>
+                      <p>• Lead tracking and management</p>
+                      <p>• Campaign performance analytics</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-white/5">
+                  <h5 className="text-sm font-medium text-gray-200 mb-1">Migration Strategy</h5>
+                  <p className="text-xs text-gray-400">
+                    Drizzle push with --force for safe schema sync. Neon Database provides automatic backups and point-in-time recovery.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* API Endpoints */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.65 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Terminal className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">API_ENDPOINTS</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Authentication</h4>
+                  <div className="space-y-1 text-xs font-mono">
+                    <p className="text-gray-200">GET /api/auth/user</p>
+                    <p className="text-gray-400 pl-4">→ Current user session</p>
+                    <p className="text-gray-200">POST /api/dev-login</p>
+                    <p className="text-gray-400 pl-4">→ Demo account login</p>
+                    <p className="text-gray-200">POST /api/auth/logout</p>
+                    <p className="text-gray-400 pl-4">→ End session</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Agents</h4>
+                  <div className="space-y-1 text-xs font-mono">
+                    <p className="text-gray-200">GET /api/agents</p>
+                    <p className="text-gray-400 pl-4">→ List user agents</p>
+                    <p className="text-gray-200">POST /api/agents</p>
+                    <p className="text-gray-400 pl-4">→ Create new agent</p>
+                    <p className="text-gray-200">PATCH /api/agents/:id</p>
+                    <p className="text-gray-400 pl-4">→ Update agent config</p>
+                    <p className="text-gray-200">DELETE /api/agents/:id</p>
+                    <p className="text-gray-400 pl-4">→ Remove agent</p>
+                    <p className="text-gray-200">POST /api/agents/generate-prompt</p>
+                    <p className="text-gray-400 pl-4">→ AI prompt generation (DeepSeek)</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Voice Sessions</h4>
+                  <div className="space-y-1 text-xs font-mono">
+                    <p className="text-gray-200">GET /api/voice-sessions</p>
+                    <p className="text-gray-400 pl-4">→ Session history with filters</p>
+                    <p className="text-gray-200">POST /api/voice/tts</p>
+                    <p className="text-gray-400 pl-4">→ Generate preview audio</p>
+                    <p className="text-gray-200">GET /api/voice/voices</p>
+                    <p className="text-gray-400 pl-4">→ Available ElevenLabs voices</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">Analytics</h4>
+                  <div className="space-y-1 text-xs font-mono">
+                    <p className="text-gray-200">GET /api/analytics/platform-stats</p>
+                    <p className="text-gray-400 pl-4">→ Global platform metrics</p>
+                    <p className="text-gray-200">GET /api/analytics/user-stats</p>
+                    <p className="text-gray-400 pl-4">→ User performance data</p>
+                    <p className="text-gray-200">GET /api/analytics/agent/:id</p>
+                    <p className="text-gray-400 pl-4">→ Agent-specific insights</p>
+                    <p className="text-gray-200">POST /api/analytics/conversation</p>
+                    <p className="text-gray-400 pl-4">→ AI conversation analysis</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">WebSocket Events</h4>
+                  <div className="space-y-1 text-xs font-mono">
+                    <p className="text-gray-200">voice:start-session</p>
+                    <p className="text-gray-400 pl-4">→ Initialize voice call</p>
+                    <p className="text-gray-200">voice:audio-chunk</p>
+                    <p className="text-gray-400 pl-4">→ Stream audio data</p>
+                    <p className="text-gray-200">voice:text-message</p>
+                    <p className="text-gray-400 pl-4">→ Text fallback mode</p>
+                    <p className="text-gray-200">voice:agent-response</p>
+                    <p className="text-gray-400 pl-4">→ Receive AI response</p>
+                    <p className="text-gray-200">voice:audio-response</p>
+                    <p className="text-gray-400 pl-4">→ Stream TTS output</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Security Implementation */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Shield className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">SECURITY_ARCHITECTURE</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-lg font-semibold text-gray-100 mb-2">IDOR Protection</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Every database query validates user ownership. Agents, sessions, and analytics require userId match. Unauthorized access returns 403 Forbidden.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-lg font-semibold text-gray-100 mb-2">Session Management</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                    PostgreSQL-backed sessions with connect-pg-simple. Secure httpOnly cookies with SameSite=Lax. SESSION_SECRET environment variable for encryption.
+                  </p>
+                  <div className="text-xs font-mono text-gray-200">
+                    cookie: {"{ maxAge: 30d, secure: prod, httpOnly: true }"}
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-sm font-semibold text-gray-200 mb-2">CSP Headers (Helmet)</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Content Security Policy whitelists Jupiter Terminal for $VOICE token swaps. Prevents XSS attacks while allowing trusted third-party integrations.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-sm font-semibold text-gray-200 mb-2">Input Validation</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Zod schemas validate all API inputs. Drizzle-zod auto-generates schemas from database models. Express-validator provides middleware protection.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-sm font-semibold text-gray-200 mb-2">Rate Limiting</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Express-rate-limit with Redis backing. AI endpoints have aiLimiter middleware (10 requests/minute). Prevents API abuse and DoS attacks.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-lg font-semibold text-gray-100 mb-2">Secret Management</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Environment variables for all API keys (DEEPGRAM_API_KEY, DEEPSEEK_API_KEY, ELEVENLABS_API_KEY). Never exposed to client. Replit Secrets integration.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Agent Studio Features */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.75 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Sparkles className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">AGENT_STUDIO</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Complete agent creation and customization platform. Build AI workforce with unique personalities, voices, and business context.
+                </p>
+
+                <div className="space-y-2">
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-lg font-semibold text-gray-100 mb-1">AI Prompt Generation</h5>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      DeepSeek-powered system prompt generation. Provide business name, services, website, and agent type. AI creates detailed, production-ready prompts optimized for sales, support, receptionist, or appointment scheduling roles.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-lg font-semibold text-gray-100 mb-1">Voice Selection</h5>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                      7 Premium ElevenLabs voices with live preview. Rachel, Domi, Bella, Dorothy, Elli, Antoni, and Josh. Test before deploying.
+                    </p>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      {["Rachel", "Domi", "Bella", "Dorothy", "Elli", "Antoni", "Josh"].map(voice => (
+                        <Badge key={voice} variant="outline" className="text-xs border-gray-600/50 text-gray-200 bg-gray-700/30 justify-center">
+                          {voice}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-semibold text-gray-200 mb-1">Business Context</h5>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      Business name, website URL, phone number fields. Agent references this data during conversations for authentic, context-aware responses.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-semibold text-gray-200 mb-1">Visual Customization</h5>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      Upload agent photos/avatars. Custom color themes (primary/secondary). Avatar styles (cyber/holographic/minimal) for unique branding.
+                    </p>
+                  </div>
+
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <h5 className="text-sm font-semibold text-gray-200 mb-1">Real-Time Testing</h5>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      Test agents immediately after creation. Voice preview generates sample audio. Full conversation testing with transcript display before production deployment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Mobile Optimization */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Phone className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">MOBILE_OPTIMIZATION</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-lg font-semibold text-gray-100 mb-2">iOS Safari Support</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed mb-2">
+                    Web Audio API with PCM16 encoding. Automatic audio unlock on first user interaction. AudioContext resume() ensures playback permission.
+                  </p>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    ScriptProcessorNode buffers 1024 samples for minimal latency. Float32Array conversion to Int16Array for Deepgram compatibility.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-lg font-semibold text-gray-100 mb-2">Android Chrome Support</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    MediaRecorder API with WebM/Opus encoding. Native browser support without fallbacks. Optimal compression for cellular networks.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-sm font-semibold text-gray-200 mb-2">Responsive Design</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Mobile-first Tailwind CSS. Touch-optimized button sizes (min 44px). Framer Motion animations at 60fps. Safe area padding for notches.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <h5 className="text-sm font-semibold text-gray-200 mb-2">Network Resilience</h5>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Socket.IO automatic reconnection. Exponential backoff for failed requests. TanStack Query retry with jitter. Offline-first where possible.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Blockchain Integration */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.85 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Coins className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">TOKEN_INTEGRATION</h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-sm font-semibold text-white mb-2">$VOICE Token Economy</h4>
+                  <p className="text-sm text-gray-300 mb-3">
+                    Revolutionary revenue-fueled burn mechanism that creates permanent scarcity as the platform grows.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40 border border-purple-500/20">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Flame className="w-5 h-5 text-orange-400" />
+                    <h4 className="text-sm font-semibold text-gray-200">Auto-Burn Mechanism</h4>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-2">
+                    10% of all platform revenue automatically converts to $VOICE tokens and burns them permanently from circulation.
+                  </p>
+                  <Badge variant="outline" className="text-xs border-gray-600/50 text-orange-400 bg-gray-700/30">
+                    Deflationary
+                  </Badge>
+                </div>
+
+                <div className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">
+                  <div className="flex items-center gap-2 mb-2">
+                    <TrendingUp className="w-5 h-5 text-gray-400" />
+                    <h4 className="text-lg font-semibold text-gray-100">Growth = Value</h4>
+                  </div>
+                  <p className="text-xs text-gray-400">
+                    As more businesses use Voicely Agent, more revenue is generated, more tokens are burned, and scarcity increases for holders.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Network</p>
+                    <p className="text-lg font-semibold text-gray-100">Solana</p>
+                  </div>
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Type</p>
+                    <p className="text-sm font-semibold text-gray-200">SPL Token</p>
+                  </div>
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Supply</p>
+                    <p className="text-lg font-semibold text-gray-100">1 Billion</p>
+                  </div>
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Status</p>
+                    <p className="text-sm font-semibold text-gray-200">Coming Soon</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Contact & Resources */}
+            <motion.div
+              className="p-6 rounded-lg bg-white/5 border border-gray-700/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700/50">
+                <Globe className="w-5 h-5 text-gray-400" />
+                <h3 className="text-sm font-semibold text-gray-100">RESOURCES</h3>
+              </div>
+              
+              <div className="space-y-2">
+                <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-lg font-semibold text-gray-100">Platform</p>
+                      <p className="text-xs text-gray-400">voicelyagent.ai</p>
+                    </div>
+                    <ExternalLink className="w-5 h-5 text-gray-400" />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Support</p>
+                    <p className="text-sm font-medium text-gray-200">24/7 Available</p>
+                  </div>
+                  <div className="p-3 rounded-md bg-white/5 border border-gray-700/50">
+                    <p className="text-xs text-gray-400 mb-1">Uptime</p>
+                    <p className="text-sm font-medium text-gray-200">99.9% SLA</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </TabsContent>
+
+        </Tabs>
+      </div>
+      </div>
+    </div>
+  );
+}
